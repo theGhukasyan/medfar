@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MedfarTest.Domain\MedfarTest.Domain.csproj" />
+      <ProjectReference Include="..\MedfarTest.Repositories\MedfarTest.Repositories.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="MediatR" Version="12.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Handlers\Contacts\" />
+      <Folder Include="Handlers\Lookups\" />
+    </ItemGroup>
+
+</Project>

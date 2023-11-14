@@ -1,0 +1,37 @@
+using System;
+using MedfarTest.Domain.IndividualMessages.Responses.Commands;
+using MedfarTest.Domain.Lookups.Responses.Commands;
+using MediatR;
+using Newtonsoft.Json;
+
+namespace MedfarTest.Domain.Lookups.Requests.Commands;
+
+public class UpdateLookupRequest : IRequest<UpdateLookupResponse>
+{
+    [JsonIgnore]
+    public Guid Id { get; set; }
+    
+    public string LookupTypeName { get; set; }
+    
+    public string LookupTypeCode { get; set; }
+    
+    public string LookupCode { get; set; }
+    
+    public int? LookupPosition { get; set; }
+
+    public Guid LookupID { get; set; }
+    
+    public string en { get; set; }
+    
+    public string fr { get; set; }
+    
+    public Guid? enValueID { get; set; }
+    
+    public Guid? frValueID { get; set; }
+    
+    public Guid? enLocalizedValueID { get; set; }
+    
+    public Guid? frLocalizedValueID { get; set; }
+    
+    public Guid LookupTypeID { get; set; }
+}
